@@ -1,17 +1,27 @@
- .home {
+.home {
+  // border: 2px solid red;
+  width: 98%;
 
   .content-section {
     margin: 30px 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    // border:2px solid orange;
 
-   
-    
+    @media @phone {
+      flex-direction: column;
+      justify-content: center;
+    }
+
     .text-content {
       width: 48%;
       padding-right: 1%;
-    }
+
+      @media @phone {
+        width: 100%;
+      }//this closes @media @phone 
+    }//this closes .text-content
 
     .img-content {
       width: 48%;
@@ -19,78 +29,79 @@
 
       img {
         border-radius: 10px;
-      }
-    }
-  }
+
+        @media @phone {
+          width: 100%;
+        }//this closes @media @phone
+      }//this closes img
+
+      @media @phone {
+        width: 100%;
+        // border:2px solid blue
+        display: flex;
+        justify-content: center;
+        padding: 0;
+        // margin:0;
+      }//this closes @media @phone
+    }//this closes .img-content
+  }//this closes .content-section
 
   .inverse-content {
     padding-bottom: 30px;
     border-bottom: 2px dashed @navigation-border;
+    // border:2px solid magenta;
+
+    @media @phone {
+      display: flex;
+      flex-direction: column-reverse;
+    }//this closes @media @phone
 
     .text-content {
       padding-left: 1%;
       padding-right: 0;
-    }
+    }//this closes .text-content
 
     .img-content {
       padding-right: 1%;
       padding-left: 0;
-    }
-  }
+    }//this closes .img-content
+  }//this closes .inverse-content
 
   .content-destination {
     width: 75%;
     margin: 0 auto 30px;
-
     img {
       border-radius: 10px;
-    }
-  }
+      
+    }//this closes img 
+  }//this closes .content-destination
 
   .content-pick {
     padding-top: 30px;
     border-top: 2px dashed @navigation-border;
     display: flex;
     justify-content: space-between;
+    
+
+    @media @phone {
+      flex-direction: column;
+    }
 
     .destination {
       width: 30%;
       margin-bottom: 30px;
-    }
-  }
 
+      @media @phone {
+        width: 80%;
+        margin: 0 auto;
+        // border:2px solid blue;
+        margin-bottom: 5%;
+      }//this closes @media @phone
 
+      .button {
+        .button();
 
-// Button stuff!
-
-.gradient-button() {
-  margin: 10px;
-  font-family: "Arial Black", Gadget, sans-serif;
-  font-size: 20px;
-  padding: 15px;
-  text-align: center;
-  text-transform: uppercase;
-  transition: 0.5s;
-  background-size: 200% auto;
-  color: #FFF;
-  box-shadow: 0 0 20px #eee;
-  border-radius: 10px;
-  width: 200px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-  cursor: pointer;
-  display: inline-block;
-  border-radius: 25px;
-}
-
-.gradient-button:hover{
-  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-  margin: 8px 10px 12px;
-}
-
-
-.gradient-button {background-image: linear-gradient(to right, #2BC0E4 0%, #EAECC6 51%, #2BC0E4 100%)}
-.gradient-button:hover { background-position: right center; }
-
-
-}// home
+      }//this closes .button
+    }//this closes .destination
+  }//this closes .content-pick 
+}//this closes HOME all the way at the top! BAM!
