@@ -1,1 +1,78 @@
-// Navigation Styles here
+// Navigation Styles here 
+
+header {
+    
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 3% 0;
+      max-width: 100%;
+    
+   
+      margin: 0 auto;
+      border-bottom: 2px dashed @navigation-border;
+      background-color: LIGHTCYAN;
+      
+      @media @phone {
+        margin:0;
+        width:100%;
+        flex-direction: column;
+      }
+    
+      h1 {
+        width: 100%;
+        font-size: 15rem;
+        align-content: center;
+
+       
+       
+        @media @phone {
+          font-size: 8rem;
+        }
+      }
+    
+      nav {
+        // border: 2px solid green;
+        width: 70%;
+        display: flex;
+        justify-content: space-evenly;
+        font-size: 2rem;
+        padding-top: 3%;
+        
+        
+          
+        
+        @media @phone{
+          flex-direction: column;
+          justify-content: center;
+            width:100%;
+            .button{
+              display:flex;
+              justify-content: center;
+              width: 90%
+            }
+        } 
+    
+        a {
+          text-decoration: none;
+          color: black;
+          
+          &:hover {
+            text-decoration: underline;
+          }
+        }//this closes a
+      }//this closes nav
+    }//this closes header
+    
+    .welcome {
+      border-bottom: 2px dashed @navigation-border;
+    
+      h2 {
+        margin-top: 2%;
+      }
+    }
+
+    
+    .button {
+      .button()}
